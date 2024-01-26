@@ -15,7 +15,7 @@
 
 / {
     behaviors {
-        lht: hold_tap {
+        lht: left_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -25,7 +25,7 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29>;
         };
-        rht: hold_tap {
+        rht: right_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
