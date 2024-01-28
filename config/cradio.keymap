@@ -194,7 +194,7 @@
             &kp LSFT   &kp A      &kp S      &kp D      &kp F          &kp G      &kp UARW   &kp H      &kp J      &kp K
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CTRL     │  Z       │  X       │  C       │  V       │   │ LEFT     │ DOWN     │ RIGHT    │  B       │ BACKSPACE│
-            &kp LCTRL  &kp X      &kp C      &kp D      &kp V          &kp LARW   &kp DARW   &kp RARW   &kp B      &kp BSPC
+            &kp LCTRL  &kp Z      &kp X      &kp C      &kp V          &kp LARW   &kp DARW   &kp RARW   &kp B      &kp BSPC
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp TAB    &kp SPACE      &kp ENTER  &to BASE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
