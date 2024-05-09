@@ -19,7 +19,7 @@
 #define MSE 4
 #define FUNC 5
 #define GAME 6
-#define BTL 7
+#define BLE 7
 
 &sl {
     release-after-ms = <1500>;
@@ -76,7 +76,7 @@
         compatible = "zmk,conditional-layers";
         bt_layer {
             if-layers = <NUM FUNC>;
-            then-layer = <BTL>;
+            then-layer = <BLE>;
         };
     };
 
@@ -102,8 +102,8 @@
         nav_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │  [       │  ]       │ DELETE   │          │   │          │ DELETE   │ PAGE DN  │ PAGE UP  │          │
-            &none      &kp LBKT   &kp RBKT   &kp DEL    &none          &none      &kp DEL    &kp PG_DN  &kp PG_UP  &none  
+        //│          │  [       │  ]       │          │          │   │          │ DELETE   │ PAGE DN  │ PAGE UP  │          │
+            &none      &kp LBKT   &kp RBKT   &none      &none          &none      &kp DEL    &kp PG_DN  &kp PG_UP  &none  
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ ESC      │  {       │  (       │  )       │          │   │ ZOOM IN  │ LEFT     │ DOWN     │ UP       │ RIGHT    │
             &kp ESC   HRML(LBRC,      LPAR,      RPAR)  &none       &kp LC(EQUAL) &kp LARW   &kp DARW   &kp UARW   &kp RARW
@@ -150,6 +150,7 @@
             >;
         };
 
+        // Mouse functionality courtesy of Kanata!
         mse_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
@@ -170,11 +171,11 @@
         func_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬────────────┬────────────┬──────────┬──────────╮
-        //│ GAME     │ F4       │ F5       │ F6       │          │   │PLAY/PAUSE│ VOL DOWN   │ VOL UP     │ VOL MUTE │          │
-            &to GAME   &kp F4     &kp F5     &kp F6     &none          &kp C_PP  &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE  &trans
+        //│ GAME     │ F4       │ F5       │ F6       │PRINT SCRN│   │ VOL MUTE │ VOL DOWN   │ VOL UP     │          │          │
+            &to GAME   &kp F4     &kp F5     &kp F6     &kp PSCRN     &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP  &none      &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼────────────┼────────────┼──────────┼──────────┤
-        //│ F11      │ F1       │ F2       │ F3       │BRIGHT UP │   │          │ PREV SONG  │ NEXT SONG  │          │          │
-            &kp F11    &kp F1     &kp F2     &kp F3    &kp C_BRI_UP    &none      &kp C_PREV   &kp C_NEXT   &none      &none
+        //│ F11      │ F1       │ F2       │ F3       │BRIGHT UP │   │PLAY/PAUSE│ PREV SONG  │ NEXT SONG  │          │          │
+            &kp F11    &kp F1     &kp F2     &kp F3    &kp C_BRI_UP   &kp C_PP   &kp C_PREV   &kp C_NEXT    &none      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼────────────┼────────────┼──────────┼──────────┤
         //│ F12      │ F7       │ F8       │ F9       │BRIGHT DWN│   │          │            │            │          │          │
             &kp F12    &kp F7     &kp F8     &kp F9    &kp C_BRI_DN    &none      &none        &none        &none      &none 
@@ -204,14 +205,14 @@
         bt_layer {
             bindings = <
         //╭──────────┬────────────┬────────────┬────────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │PROFILE 4   │   RESET    │ BOOTLOADER │          │   │          │BOOTLOADER│  RESET   │          │          │
-            &none     &bt BT_SEL 4  &sys_reset  &bootloader   &none          &none    &bootloader &sys_reset  &none      &trans
+        //│          │ PROFILE 4  │ RESET      │ BOOTLOADER │          │   │          │BOOTLOADER│ RESET    │          │          │
+            &none     &bt BT_SEL 4 &sys_reset   &bootloader   &none          &none    &bootloader &sys_reset  &none      &trans
         //├──────────┼────────────┼────────────┼────────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │PROFILE 1   │PROFILE 2   │PROFILE 3   │          │   │          │          │          │          │          │
+        //│          │ PROFILE 1  │ PROFILE 2  │ PROFILE 3  │          │   │          │          │          │          │          │
             &none     &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &none          &none      &none      &none      &none      &none
         //├──────────┼────────────┼────────────┼────────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │ OUT TO USB │ OUT TO BLE │ CLEAR BT   │          │   │          │          │          │          │          │
-            &none     &out OUT_USB &out OUT_BLE  &bt BT_CLR   &none          &none      &none      &none      &none      &none
+            &none     &out OUT_USB &out OUT_BLE &bt BT_CLR    &none          &none      &none      &none      &none      &none
         //╰──────────┴────────────┴────────────┼────────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                 &bt BT_SEL 0  &trans         &trans     &trans
         //                                     ╰────────────┴──────────╯   ╰──────────┴──────────╯
