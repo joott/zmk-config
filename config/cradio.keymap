@@ -108,8 +108,8 @@
         //│ ESC      │  {       │  (       │  )       │          │   │ ZOOM IN  │ LEFT     │ DOWN     │ UP       │ RIGHT    │
             &kp ESC   HRML(LBRC,      LPAR,      RPAR)  &none       &kp LC(EQUAL) &kp LARW   &kp DARW   &kp UARW   &kp RARW
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │  }       │          │   │ ZOOM OUT │ HOME     │ END      │ MOUSE    │          │
-            &kp LSFT   &none      &none      &kp RBRC   &none       &kp LC(MINUS) &kp HOME   &kp END    &to MSE    &trans
+        //│          │ INSERT   │ DELETE   │  }       │          │   │ ZOOM OUT │ HOME     │ END      │ MOUSE    │          │
+            &kp LSFT   &kp INS    &kp DEL    &kp RBRC   &none       &kp LC(MINUS) &kp HOME   &kp END    &to MSE    &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &to 0      &trans         &trans     &kp ENTER
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
