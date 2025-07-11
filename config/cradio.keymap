@@ -127,7 +127,7 @@
             &kp TAB    &kp N1     &kp N2     &kp N3     &kp CARET      &none     HRMR(EQUAL,     COMMA,     DOT)   &kp FSLH
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │  7       │  8       │  9       │  ~       │   │          │  -       │  _       │  +       │          │
-            &kp LSFT   &kp N7     &kp N8     &kp N9     &kp TILDE      &none      &kp MINUS  &kp UNDER  &kp PLUS   &trans
+            &kp LSFT   &kp N7     &kp N8     &kp N9     &kp TILDE      &none      &kp MINUS  &kp UNDER  &kp PLUS  &mt LSFT BSPC
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp N0     &trans         &trans     &to BASE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
