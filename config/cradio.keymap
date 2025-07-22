@@ -104,7 +104,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │  [       │  ]       │          │          │   │          │ DELETE   │ PAGE DN  │ PAGE UP  │          │
-            &none      &kp LBKT   &kp RBKT   &none      &none          &none      &kp DEL    &kp PG_DN  &kp PG_UP  &none  
+            &none      &kp LBKT   &kp RBKT   &none      &none          &none      &kp DEL    &kp PG_DN  &kp PG_UP  &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ ESC      │  {       │  (       │  )       │          │   │ ZOOM IN  │ LEFT     │ DOWN     │ UP       │ RIGHT    │
             &kp ESC   HRML(LBRC,      LPAR,      RPAR)  &none       &kp LC(EQUAL) &kp LARW   &kp DARW   &kp UARW   &kp RARW
@@ -138,10 +138,10 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │  @       │  #       │  $       │  %       │   │          │          │          │          │          │
-            &none      &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &none      &none      &none      &none      &none 
+            &none      &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &none      &none      &none      &none      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  `       │  !       │  ?       │  :       │  &       │   │          │          │          │          │          │
-            &kp GRAVE  &kp EXCL   &kp QMARK  &kp COLON  &kp AMPS       &none      &none      &none      &none      &none 
+            &kp GRAVE  &kp EXCL   &kp QMARK  &kp COLON  &kp AMPS       &none      &kp LGUI   &kp LCTRL  &kp LALT   &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │  \       │  ;       │  "       │  |       │   │          │          │          │BASE LAYER│          │
             &none      &kp BSLH   &kp SEMI   &kp DQT    &kp PIPE       &none      &none      &none      &to BASE   &trans
@@ -155,13 +155,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │SCRL LEFT │SCRL DOWN │SCRL UP   │SCRL RIGHT│
-            &none      &none      &none      &none     &none &none &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT 
+            &none      &none      &none      &none     &none &none &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CONTROL  │ MIDDLE   │ RIGHT    │ LEFT     │          │   │          │ MSE LEFT │ MSE DOWN │ MSE UP   │ MSE RIGHT│
             &kp LCTRL  &mkp MCLK  &mkp RCLK  &mkp LCLK &none &none &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ ALT      │          │          │          │          │   │          │ LEFT     │ RIGHT    │BASE LAYER│          │
-            &kp LALT   &none      &none      &none      &none          &none      &mkp LCLK  &mkp RCLK  &to BASE   &none 
+            &kp LALT   &none      &none      &none      &none          &none      &mkp LCLK  &mkp RCLK  &to BASE   &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp LGUI   &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -178,7 +178,7 @@
             &kp F11    &kp F1     &kp F2     &kp F3    &kp C_BRI_UP   &kp C_PP   &kp C_PREV   &kp C_NEXT    &none      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼────────────┼────────────┼──────────┼──────────┤
         //│ F12      │ F7       │ F8       │ F9       │BRIGHT DWN│   │          │            │            │          │          │
-            &kp F12    &kp F7     &kp F8     &kp F9    &kp C_BRI_DN    &none      &none        &none        &none      &none 
+            &kp F12    &kp F7     &kp F8     &kp F9    &kp C_BRI_DN    &none      &none        &none        &none      &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼────────────┼────────────┴──────────┴──────────╯
                                              &kp F10    &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴────────────╯
