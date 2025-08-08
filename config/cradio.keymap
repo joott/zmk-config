@@ -6,6 +6,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
+
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 300
 #include <dt-bindings/zmk/pointing.h>
 
 // Home row mods macro
@@ -155,7 +157,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │SCRL LEFT │SCRL DOWN │SCRL UP   │SCRL RIGHT│
-            &none      &none      &none      &none     &none &none &msc MOVE_LEFT &msc MOVE_DOWN &msc MOVE_UP &msc MOVE_RIGHT
+            &none      &none      &none      &none     &none &none &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CONTROL  │ MIDDLE   │ RIGHT    │ LEFT     │          │   │          │ MSE LEFT │ MSE DOWN │ MSE UP   │ MSE RIGHT│
             &kp LCTRL  &mkp MCLK  &mkp RCLK  &mkp LCLK &none &none &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT
